@@ -1,0 +1,26 @@
+repo_url: https://github.com/JoseFilipi/2024.1-Projeto-Integrador-1
+repo_name: 2024.1-Projeto-Integrador-1
+site_url: https://projeto-integrador-1.github.io/pi-1-gato-movel/
+
+site_name: Projeto Integrador 1 - Gato Móvel
+nav:
+    - Início: "index.md"
+theme:
+  name: material
+  features:
+    - navigation.tabs
+  palette: 
+
+    # Palette toggle for light mode
+    - scheme: default
+      primary: orange
+      toggle:
+        icon: material/eye
+        name: Mudar para o modo escuro
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: teal
+      toggle:
+        icon: material/eye-outline
+        name: Mudar para o modo claro
