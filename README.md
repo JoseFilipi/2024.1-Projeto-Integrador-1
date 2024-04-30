@@ -12,6 +12,7 @@ Esta página é dedicada à documentação de todos os artefatos produzidos pelo
         <td align="center"><a href="https://github.com/JoseFilipi"><img style="border-radius: 50%;" src="https://github.com/JoseFilipi.png" width="100px;" alt=""/><br /><sub><b>José Filipi</b></sub></a><br />
           <td align="center"><a href="https://github.com/MilenaFRocha"><img style="border-radius: 50%;" src="https://github.com/MilenaFRocha.png" width="100px;" alt=""/><br /><sub><b>Milena Rocha</b></sub></a><br />
           <td align="center"><a href="https://github.com/zjosuez"><img style="border-radius: 50%;" src="https://github.com/zjosuez.png" width="100px;" alt=""/><br /><sub><b>Josué Teixeira </b></sub></a><br />
+          <td align="center"><a href="https://github.com/IsraelThalles"><img style="border-radius: 50%;" src="https://github.com/IsraelThalles.png" width="100px;" alt=""/><br /><sub><b>Israel Thalles</b></sub></a><br />            
   </tr>
 </table>
 
