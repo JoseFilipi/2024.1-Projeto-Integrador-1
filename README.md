@@ -10,6 +10,7 @@ Esta página é dedicada à documentação de todos os artefatos produzidos pelo
 <table>
   <tr>
         <td align="center"><a href="https://github.com/JoseFilipi"><img style="border-radius: 50%;" src="https://github.com/JoseFilipi.png" width="100px;" alt=""/><br /><sub><b>José Filipi</b></sub></a><br />
+          <td align="center"><a href="https://github.com/MilenaFRocha"><img style="border-radius: 50%;" src="https://github.com/MilenaFRocha.png" width="100px;" alt=""/><br /><sub><b>Milena Rocha</b></sub></a><br />
   </tr>
 </table>
 
