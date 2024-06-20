@@ -7,6 +7,6 @@
     - Banco de dados: `SQLite`
 
 - Para rodar a API:
-    - Configurar o SQLite
+    - Configurar o SQLite (ainda vai ser feito...)
     - `npm install` para instalar as dependências
     - `npm start` para rodar o projeto
