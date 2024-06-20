@@ -1,0 +1,37 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "openapi": "1.0.0",
+    "language": "pt-BR",
+    "title": "API do projeto de PI1",
+    "description": "REST API Node do projeto de PI1",
+    "version": "1.0.0"
+  },
+  "host": "localhost:3000",
+  "servers": [
+    {
+      "url": "http://localhost:3000",
+      "description": "Local"
+    }
+  ],
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "paths": {},
+  "definitions": {
+    "description": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "example": "string"
+        },
+        "description": {
+          "type": "string",
+          "example": "string"
+        }
+      }
+    }
+  }
+}
