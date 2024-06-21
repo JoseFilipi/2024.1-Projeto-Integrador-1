@@ -36,8 +36,8 @@
         "tags": [
           "Circuito"
         ],
-        "summary": "",
-        "description": "",
+        "summary": "Recebe um arquivo .csv com os dados do circuito e insere no nosso banco de dados",
+        "description": "Insere os dados de um circuito",
         "consumes": [
           "multipart/form-data"
         ],
