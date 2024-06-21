@@ -1,7 +1,9 @@
-const service = () => {
-    // aqui vai vir a lógica do service...
+const repository = require('../database/circuitoRepository')
+
+const getAll = () => {
+    repository.getAll();
 }
 
 module.exports = {
-    service
+    getAll
 }
