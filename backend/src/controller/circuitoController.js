@@ -13,8 +13,8 @@ const getAll = async (req, res) => {
 const post = async (req, res) => {
     /*
         #swagger.tags = ['Circuito']
-        #swagger.description = ''
-        #swagger.summary = ''
+        #swagger.description = 'Insere os dados de um circuito'
+        #swagger.summary = 'Recebe um arquivo .csv com os dados do circuito e insere no nosso banco de dados'
         #swagger.consumes = ['multipart/form-data']
         #swagger.parameters['file'] = {
             in: 'formData',
@@ -26,7 +26,7 @@ const post = async (req, res) => {
 
     if (req.file) {
         const fileContent = req.file.buffer.toString('utf-8');
-        console.log(fileContent);
+        service.post(fileContent);
     }
 
     res.status(200).json({ msg: 'ola' });
