@@ -18,7 +18,22 @@
   "schemes": [
     "http"
   ],
-  "paths": {},
+  "paths": {
+    "/circuito": {
+      "get": {
+        "tags": [
+          "Circuito"
+        ],
+        "summary": "Trás todas as informações sobre os circuitos realizados pelo carrinho.",
+        "description": "Dados sobre o circuito",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    }
+  },
   "definitions": {
     "description": {
       "type": "object",

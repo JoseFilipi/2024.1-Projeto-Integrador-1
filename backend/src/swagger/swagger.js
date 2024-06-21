@@ -25,9 +25,8 @@ const doc = {
 
 const outputFile = './swagger_output.json';
 
-// adicionar os endpoints aqui
 const entryPoint = [
-
+    '../routes/circuitoRoutes.js'
 ];
 
 swaggerAutogen(outputFile, entryPoint, doc);
