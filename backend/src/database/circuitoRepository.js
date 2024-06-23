@@ -1,16 +1,22 @@
 const openDb = require('./config/configDb');
 
 const getAll = async () => {
-    openDb().then((db) => {
-        db.each('SELECT * FROM car', (err, row) => {
-            if (err) {
-              console.error(err.message);
-            }
-            console.log(row);
-          });
-    });
+  const db = await openDb();
+  const query = 'SELECT * FROM circuito;';
+  const circuitos = await db.all(query);
+  
+  return circuitos;
+};
+
+const post = async (aceleracao, tempoDeViagem, velocidadeInstantanea, distanciaPercorrida, energiaConsumida) => {
+  openDb().then((db) => {
+    const query = 'INSERT INTO circuito (instant_speed, instant_acceleration, energy_consumed, travelled_distance, travel_time) VALUES (?, ?, ?, ?, ?);';
+
+    db.run(query, [velocidadeInstantanea, aceleracao, energiaConsumida, distanciaPercorrida, tempoDeViagem]);
+  });
 }
 
 module.exports = {
-    getAll
+  getAll,
+  post
 }

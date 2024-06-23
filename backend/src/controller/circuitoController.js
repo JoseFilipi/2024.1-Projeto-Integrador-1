@@ -6,9 +6,15 @@ const getAll = async (req, res) => {
         #swagger.description = 'Dados sobre o circuito'
         #swagger.summary = 'Trás todas as informações sobre os circuitos realizados pelo carrinho.'
     */
-    service.getAll();
-    res.status(200).json({ msg: 'ola' });
-}
+    try {
+        const circuitos = await service.getAll();
+        console.log('circuitos: ', circuitos);
+        res.status(200).json(circuitos);
+    } catch (error) {
+        console.error(error.message);
+        res.status(500).json({ error: 'Erro ao buscar os circuitos' });
+    }
+};
 
 const post = async (req, res) => {
     /*
@@ -24,13 +30,19 @@ const post = async (req, res) => {
         }
     */
 
-    if (req.file) {
-        const fileContent = req.file.buffer.toString('utf-8');
-        service.post(fileContent);
+    if (!req.file) {
+        return res.status(400).json({ error: 'Arquivo não encontrado' });
     }
 
-    res.status(200).json({ msg: 'ola' });
-}
+    try {
+        const fileContent = req.file.buffer.toString('utf-8');
+        await service.post(fileContent);
+        res.status(201).json({ msg: 'Dados inseridos com sucesso' });
+    } catch (error) {
+        console.error(error.message);
+        res.status(500).json({ error: 'Erro ao inserir os dados do circuito' });
+    }
+};
 
 module.exports = {
     getAll,
