@@ -8,7 +8,6 @@ const getAll = async (req, res) => {
     */
     try {
         const circuitos = await service.getAll();
-        console.log('circuitos: ', circuitos);
         res.status(200).json(circuitos);
     } catch (error) {
         console.error(error.message);
