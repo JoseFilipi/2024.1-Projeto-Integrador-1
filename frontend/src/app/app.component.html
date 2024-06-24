@@ -1,1 +1,19 @@
-<router-outlet></router-outlet>
+<h1>Gráficos Dos Circuitos</h1>
+
+<div class="container">
+  <ng-container *ngIf="circuitos.length == 0">
+    <h2>No momento não existe nenhum gráfico para ser plotado...</h2>
+  </ng-container>
+
+  <div matTooltip="Esse gráfico mostra o consumo de energia realizado por cada circuito">
+    <canvas #graficoBar></canvas>
+  </div>
+
+  <div matTooltip="Esse gráfico mostra o tempo de viagem com relação a distância percorrida">
+    <canvas #graficoLine></canvas>
+  </div>
+
+  <div matTooltip="Esse gráfico mostra todos os dados obtidos no circuito">
+    <canvas #graficoRadar></canvas>
+  </div>
+</div>
