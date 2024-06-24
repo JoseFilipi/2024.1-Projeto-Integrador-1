@@ -19,7 +19,7 @@ const post = async (fileContent) => {
         return match ? parseInt(match[0]) : null; // Converte para número inteiro se encontrado
     }).filter((numero) => numero !== null);
 
-    for (let i = 0; i < csvToArray.length; i += 3) {
+    for (let i = 0; i < csvToArray.length; i += 4) {
         tempos.push(csvToArray[i]);
 
         const rotacaoMotorA = csvToArray[i+1];
