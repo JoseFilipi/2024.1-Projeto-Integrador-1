@@ -38,6 +38,7 @@ const post = async (fileContent) => {
     tempoDeViagem = (tempos[tempos.length-1]) / 1000;
     velocidadeInstantanea = velocidades[0] + (aceleracao*tempoDeViagem);
     distanciaPercorrida = velocidadeInstantanea * tempoDeViagem;
+    energiaConsumida = csvToArray[csvToArray.length - 1];
 
     console.log(`Aceleração: ${aceleracao} m/s²`);
     console.log(`Tempo de Viagem: ${tempoDeViagem} s`);
