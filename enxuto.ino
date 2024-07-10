@@ -40,12 +40,10 @@ unsigned long getTimeElapsed() {
 
 // Interrupções para contagem de pulsos
 void contaPulsosMotorA() {
-    // Serial.println("interrompe A");
     pulsosMotorA++;
 }
 
 void contaPulsosMotorB() {
-    // Serial.println("interrompe B");
     pulsosMotorB++;
 }
 
@@ -54,9 +52,6 @@ void setup() {
 
     // Inicialização dos pinos SPI manualmente (de acordo com a configuração do seu hardware)
     const int chipSelectPin = 10; // Pino do chip select do cartão SD
-
-
-    
 
     startTimer(); // Inicia a contagem de tempo no início do programa
     ultimoTempo = millis(); // Inicializa o tempo para contagem de pulsos
@@ -69,7 +64,6 @@ void setup() {
     Wire.begin();
     qmc.init();
 
-    
     // Inicializa o cartão SD
     if (!sd.begin(chipSelectPin, SPI_HALF_SPEED)) {
         Serial.println("Falha ao inicializar o cartão SD.");
@@ -97,21 +91,10 @@ void loop() {
     if (heading > 2 * PI) heading -= 2 * PI;
     float headingDegrees = heading * 180 / M_PI;
 
-    // Serial.print("x: ");
-    // Serial.print(x);
-    // Serial.print(" y: ");
-    // Serial.print(y);
-    // Serial.print(" heading: ");
-    // Serial.print(heading);
-    // Serial.print(" degrees: ");
-    // Serial.println(headingDegrees);
-
-    // Verifica se há dados disponíveis para leitura no Serial Monitor
     if (Serial.available() > 0) {
         char input = Serial.read();
         if (input == 'p') {
             Serial.println("Programa encerrado.");
-            // Fecha o arquivo antes de encerrar
             file.close();
             while (true) {} // Loop infinito para manter o programa parado
         }
@@ -164,6 +147,13 @@ void loop() {
         Serial.print(" RPM,");
         Serial.print(" Degrees: ");
         Serial.println(strHeadingDegrees);
+
+        // Fechar e reabrir o arquivo periodicamente
+        file.close();
+        if (!file.open(fileName, O_CREAT | O_WRITE | O_APPEND)) {
+            Serial.println("Falha ao reabrir o arquivo no cartão SD.");
+            return;
+        }
     }
 
     delay(200); // Aguarda um pouco antes de repetir o loop
